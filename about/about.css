@@ -1,0 +1,77 @@
+:root{
+    --background-color: #01111d;
+    --secondary-bg-color: #011627; 
+    --active-selection: #1D3B53;
+    --text-color: #d6deeb;
+    --secondary-color: #637777;
+    --border-color: #5f7e97;
+    --white-color: #ffffff;
+    --var-constant-color:#FF6363;
+    --var-value-color: 	#82AAFF;
+    --var-name-color: #7FDBCA;
+    --var-dict-key-color: #C792EA;
+    --comment-color: #637777;
+    /* --var-dict-key-color: #ADDB67; */
+    --primary-ff: 'Fira Code', monospace;
+    --second-ff: 'JetBrains Mono', monospace;
+}
+.main-content{
+    display: flex;
+    height: 85%;
+}
+/* sidebar */
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 10.4em;
+    border-right: 1px solid var(--border-color);
+    font-size: 1.125rem;
+}
+.sidebar-link{
+    font-family: var(--primary-ff);
+    font-size: 1rem;
+    color: var(--secondary-color);
+    padding: 0.25em 0.6em;
+    cursor: pointer;
+}
+#sidebar-active, .sidebar-link:hover{
+    color: var(--text-color);
+    background-color: var(--active-selection);
+}
+/* code */
+.code-content{
+    margin: .5em;
+    flex-grow: 1;
+}
+.data-line, .dict, .dict-items, .list, .list-items{
+    font-family: var(--primary-ff);
+    font-size: 1rem;
+    padding: .1em;
+}
+.line-no{
+    color: var(--secondary-color);
+    width: 2em; 
+}
+.const-name{
+    color: var(--var-constant-color);
+    text-transform: uppercase;
+}
+.var-value, .var-dict-value, .var-list-value{
+    color: var(--var-value-color);
+}
+.var-name{
+    color: var(--var-name-color);
+}
+.var-dict-key{
+    color: var(--var-dict-key-color);
+}
+.dict, .list{
+    display: flex;
+}
+.dict-items, .list-items, .comment{
+    margin: 0 0 0 1em;
+}
+.comment{
+    font-style: italic;
+    color: var(--comment-color);
+}

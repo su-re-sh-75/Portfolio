@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #d6deeb;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --background-color: #01111d;
+    /* --secondary-bg-color: #011a2f; */
+    --secondary-bg-color: #011627; 
+    --active-selection: #1D3B53;
+    --text-color: #d6deeb;
+    --secondary-color: #637777;
+    --border-color: #5f7e97;
+    --white-color: #ffffff;
+    --primary-ff: 'Fira Code', monospace;
+    --second-ff: 'JetBrains Mono', monospace;
+}
+
+html {
+    height: 100%;
+}
+
+@media screen and (max-width: 480px) {
+    html{
+        font-size: 16px;
+    }
+}
+
+body{
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Hero section */
+.hero-section{
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}   
+
+/* Nav bar */
+.navbar{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    height: 8%;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.navbar a{
+    display: inline-block;
+    font-family: var(--primary-ff);
+    color: var(--secondary-color);
+    font-size: 1.125rem;
+    padding: 0.6em;
+    border-right: 1px solid var(--border-color);
+    cursor: pointer;
+    /* height: 100%; */
+}
+.navbar a:hover:not(#nav-suresh), #nav-active{
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+}
+
+#nav-suresh{
+    color: var(--text-color);
+    width: 10em;
+}
+.hero-text{
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85%;
+}
+
+.hero-text h1{
+    font-family: var(--second-ff);
+    font-size: 3rem;
+}
+
+.profession{
+    font-family: 'Nanum Gothic Coding', monospace;
+    color: var(--secondary-color);
+    font-size: 2rem;
+}
+
+.profession span{
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.hi-text{
+    font-family: var(--primary-ff);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+.container-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    margin: 2em 0.5em;
+    font-size: 1rem;
+    height: 15%;
+    font-family: var(--second-ff);
+}
+.container-2 a, .container-2 p{
+    color: var(--secondary-color);
+}
+#git-link:hover{
+    text-decoration: underline;
+    color: var(--text-color);   
+}
+/* Footer nav */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7%;
+    border-top: 1px solid var(--border-color);
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.foot-1 a, .foot-4 a{
+    display: inline-block;
+    font-size: 1rem;
+    font-family: var(--primary-ff);
+    color: var(--secondary-color);
+    padding: 0.5em;
+    margin: 0 0.5em;
+}
+.foot-1{
+    border-right: 1px solid var(--border-color);  
+}
+.foot-4{
+    border-left: 1px solid var(--border-color);
+}
+.foot-1 a:hover, .foot-4 a:hover{       
+    color: var(--text-color);
+}
+#footer-github{
+    display: inline-block;
+    /* width: 10%;
+    height: 10%; */
+}
