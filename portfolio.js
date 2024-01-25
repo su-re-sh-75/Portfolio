@@ -52,9 +52,7 @@ class TextScramble {
     }
   }
     
-  const el = document.querySelector('#hero-name');
-  const content = el.innerText;
-  const fx = new TextScramble(el);
+const el = document.querySelector('#hero-name');
+const content = el.innerText;
+const fx = new TextScramble(el);
 fx.setText(content);
-let isHovered = false;
-// el.addEventListener('mouseover', () => {fx.setText(content);});
