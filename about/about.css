@@ -24,7 +24,7 @@
 }
 .main-content{
     display: flex;
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 /* sidebar */
 .sidebar{
@@ -33,6 +33,7 @@
     width: 11.1em;
     border-right: 1px solid var(--border-color);
     font-size: 1.125rem;
+    height: 75%;
 }
 .sidebar-link{
     font-family: var(--primary-ff);
@@ -63,6 +64,8 @@
 .code-content{
     margin: .5em;
     flex-grow: 1;
+    overflow-y: auto;
+    max-height:75%;
 }
 .data-line, .dict, .dict-items, .list, .list-items{
     font-family: var(--primary-ff);
