@@ -1,29 +1,36 @@
 :root{
-    --background-color: #01111d;
-    --secondary-bg-color: #011627; 
+    --background-color: #011627;
+    /* --background-color: #01111d; */
+    /* --secondary-bg-color: #011627; */
+    --secondary-bg-color: #01111d; 
+    --hover-bg-color:#01111d;
     --active-selection: #1D3B53;
     --text-color: #d6deeb;
-    --secondary-color: #637777;
+    --secondary-color: #607B96;
     --border-color: #5f7e97;
-    --white-color: #ffffff;
     --var-constant-color:#FF6363;
     --var-value-color: 	#82AAFF;
     --var-name-color: #7FDBCA;
     --var-dict-key-color: #C792EA;
-    --comment-color: #637777;
+
+    --profession-color:#4D5BCE;
+    --value-color:#E99287;
+    --var-color:#43D9AD;
     /* --var-dict-key-color: #ADDB67; */
+    --comment-color: #637777;
     --primary-ff: 'Fira Code', monospace;
     --second-ff: 'JetBrains Mono', monospace;
+    --third-ff:'Nanum Gothic Coding', monospace;
 }
 .main-content{
     display: flex;
-    height: 85%;
+    flex-grow: 1;
 }
 /* sidebar */
 .sidebar{
     display: flex;
     flex-direction: column;
-    width: 10.4em;
+    width: 11.1em;
     border-right: 1px solid var(--border-color);
     font-size: 1.125rem;
 }
@@ -33,10 +40,17 @@
     color: var(--secondary-color);
     padding: 0.25em 0.6em;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
-#sidebar-active, .sidebar-link:hover{
+#sidebar-active,
+.sidebar-link:hover {
     color: var(--text-color);
     background-color: var(--active-selection);
+}
+#sidebar-active svg,
+.sidebar-link:hover svg {
+    fill: var(--text-color);
 }
 /* code */
 .code-content{
@@ -74,4 +88,10 @@
 .comment{
     font-style: italic;
     color: var(--comment-color);
+}
+.python-icon{
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    fill: var(--secondary-color);
 }

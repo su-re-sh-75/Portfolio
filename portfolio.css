@@ -16,7 +16,6 @@
     --text-color: #d6deeb;
     --secondary-color: #607B96;
     --border-color: #5f7e97;
-    --white-color: #ffffff;
     --profession-color:#4D5BCE;
     --value-color:#E99287;
     --var-color:#43D9AD;
@@ -42,7 +41,6 @@ body{
     justify-content: center;
     align-items: center;
     height: 100%;
-    box-sizing: border-box;
 }
 
 /* Hero section */
@@ -63,32 +61,38 @@ body{
     border-bottom: 1px solid var(--border-color);
     border-top-right-radius: 0.5rem;
     border-top-left-radius: 0.5rem;
-    height: 9%;
+    height: 7%;
     /* padding: 0.5em; */
     width: 100%;
 }
 .navbar div{
-    /* display: inline-block; */
-    font-family: var(--primary-ff);
-    color: var(--secondary-color);
-    font-size: 1.125rem;
+    display: inline-flex;
+    align-items: center;
     padding: 0.6em;
     border-right: 1px solid var(--border-color);
     cursor: pointer;
-    box-sizing: border-box;
+    height: 100%;
+}
+.navbar a{
+    color: var(--secondary-color);
+    font-family: var(--primary-ff);
+    font-size: 1.125rem;
 }
 .navbar div:hover{
     background-color: var(--hover-bg-color);
-    box-shadow: none;
 }
-.navbar div:hover:not(#nav-suresh), #nav-active{
-    color: var(--text-color);
+.navbar div:hover:not(.navbar div:first-child), #nav-active{
     border-bottom: 3px solid var(--border-bottom-color);
 }
-#nav-suresh{
+.navbar div:hover a, #nav-active a{
+    color: var(--text-color);
+}
+#nav-suresh {
+    border-top-left-radius: 0.5rem;
+}   
+#nav-suresh a{
     color: var(--text-color);
     width: 10em;
-    border-top-left-radius: 0.5rem;
 }
 .navbar div:last-child{
     margin-left: auto;
@@ -104,7 +108,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 84%;
+    flex-grow: 1;
 }
 #hero-name{
     font-family: var(--second-ff);
@@ -134,6 +138,7 @@ body{
     font-family: var(--primary-ff);
     color: var(--secondary-color);
     font-size: 1.5rem;
+    font-weight: lighter;
 }
 .container-2{
     display: flex;
@@ -165,7 +170,7 @@ body{
 .footer{
     display: flex;
     align-items: center;
-    height: 7%;
+    height: 5%;
     border-top: 1px solid var(--border-color);
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
@@ -175,31 +180,63 @@ body{
     font-size: 1rem;
     font-family: var(--primary-ff);
     color: var(--secondary-color);
-    padding: 0.5em;
+    padding: 0.25em;
     align-items: center;
 }
 .footer div{
     height: 100%;
     display: inline-flex;
     align-items: center;
+    font-family: var(--primary-ff);
+    color: var(--secondary-color);
+    padding: 0 0.25em;
+    cursor: pointer;
 }
-.footer div:hover{
-    background-color: var(--hover-bg-color);
-}
-.footer div:not(.foot-4){
+.footer div:not(:nth-last-child(-n+5)){
     border-right: 1px solid var(--border-color);  
-}
-.footer a:hover, .footer a:hover .icon{       
-    fill: var(--text-color);
-    color: var(--text-color);
 }
 .footer div:first-child{
     border-bottom-left-radius: 0.5rem;
 }
 .footer div:last-child{
     border-left: 1px solid var(--border-color);
-    margin-left: auto;
     border-bottom-right-radius: 0.5rem;
+}
+.footer div:nth-last-child(-n+5){
+    border-left: 1px solid var(--border-color);
+}
+.foot-4{
+    margin-left: auto;
+}
+.footer div:not(:nth-child(3), :nth-child(4)):hover, .footer div:not(:nth-child(3)):hover .icon{
+    background-color: var(--hover-bg-color);
+    color: var(--text-color);
+    fill: var(--text-color);
+}
+.footer a:hover, .footer a:hover .icon{       
+    fill: var(--text-color);
+    color: var(--text-color);
+}
+.foot-5:hover .st0{
+    stroke: var(--text-color);
+}
+
+@keyframes refresh{
+    0%{
+        transform: rotate(270deg) matrix(-1, 0, 0, 1, 0, 0);
+    }
+    25%{
+        transform: rotate(0deg) matrix(-1, 0, 0, 1, 0, 0);
+    }
+    50%{
+        transform: rotate(90deg) matrix(-1, 0, 0, 1, 0, 0);
+    }
+    75%{
+        transform: rotate(180deg) matrix(-1, 0, 0, 1, 0, 0);
+    }
+    100%{
+        transform: rotate(270deg) matrix(-1, 0, 0, 1, 0, 0);
+    }
 }
 /* icons */
 .icon{
@@ -211,8 +248,10 @@ body{
 .github-reload{
     transform: rotate(270deg) matrix(-1, 0, 0, 1, 0, 0);
     margin: 0;
-    cursor: pointer;
 }
+.github-warning{
+    fill: none;
+}   
 .footer div:nth-child(2){
     padding: 0 5px;
 }
