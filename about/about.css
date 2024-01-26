@@ -43,6 +43,13 @@
     display: flex;
     align-items: center;
 }
+.sidebar p{
+    font-family: var(--primary-ff);
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
 #sidebar-active,
 .sidebar-link:hover {
     color: var(--text-color);
