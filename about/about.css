@@ -16,7 +16,6 @@
     --profession-color:#4D5BCE;
     --value-color:#E99287;
     --var-color:#43D9AD;
-    /* --var-dict-key-color: #ADDB67; */
     --comment-color: #637777;
     --primary-ff: 'Fira Code', monospace;
     --second-ff: 'JetBrains Mono', monospace;
@@ -24,16 +23,16 @@
 }
 .main-content{
     display: flex;
-    /* flex-grow: 1; */
+    height: 88%;
 }
 /* sidebar */
 .sidebar{
     display: flex;
     flex-direction: column;
-    width: 11.1em;
+    width: 17%;
     border-right: 1px solid var(--border-color);
     font-size: 1.125rem;
-    height: 75%;
+    height: 100%;
 }
 .sidebar-link{
     font-family: var(--primary-ff);
@@ -60,22 +59,43 @@
 .sidebar-link:hover svg {
     fill: var(--text-color);
 }
+/* scrollbar */
+::-webkit-scrollbar {
+    width: .8em;
+}  
+::-webkit-scrollbar-track {
+    background-color: var(--active-selection);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+}
 /* code */
 .code-content{
     margin: .5em;
     flex-grow: 1;
     overflow-y: auto;
-    max-height:75%;
+    width: 81%;
+    height:98%;
+    scrollbar-color: var(--active-selection) var(--secondary-color);
+    scrollbar-width: .8em;
 }
-.data-line, .dict, .dict-items, .list, .list-items{
+.data-line, .dict, .list{
     font-family: var(--primary-ff);
     font-size: 1rem;
     padding: .1em;
 }
+.dict-items,.list-items{
+    font-family: var(--primary-ff);
+    font-size: 1rem;
+}
 .line-no{
     color: var(--secondary-color);
-    width: 2em; 
+    display: inline-block;
+    width: 1.5em; 
+    margin-right: 1.5em;
+    text-align: end;
 }
+
 .const-name{
     color: var(--var-constant-color);
     text-transform: uppercase;
@@ -86,8 +106,14 @@
 .var-name{
     color: var(--var-name-color);
 }
+.var-name-v2{
+    color: var(--var-constant-color);
+}
 .var-dict-key{
     color: var(--var-dict-key-color);
+}
+.inner{
+    margin-left: 1.5em;
 }
 .dict, .list{
     display: flex;
