@@ -83,19 +83,20 @@ body{
 .navbar div:hover a, #nav-active a{
     color: var(--text-color);
 }
-#nav-suresh {
+#nav-suresh{
     border-top-left-radius: 0.5rem;
     width: 17%;
-}   
+}
 #nav-suresh a{
     color: var(--text-color);
+    width: 100%;
+    display: inline-block;
 }
 .navbar div:last-child{
     margin-left: auto;
     border-left: 1px solid var(--border-color);;
     border-right: none;
     border-top-right-radius: 0.5rem;
-
 }
 /* center section */
 .hero-text{
@@ -213,9 +214,10 @@ body{
     fill: var(--text-color);
     color: var(--text-color);
 }
-.foot-5:hover .st0{
+.foot-5:hover .st0, .contacts > a:hover .st0{
     stroke: var(--text-color);
 }
+
 
 @keyframes refresh{
     0%{

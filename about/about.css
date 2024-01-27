@@ -59,6 +59,16 @@
 .sidebar-link:hover svg {
     fill: var(--text-color);
 }
+.contacts{
+    margin-top: auto;
+    margin-bottom: 2em;
+}
+.contacts > a{
+    margin-top: .5em;
+}
+.contacts > p{
+    border-top: 1px solid var(--border-color);
+}
 /* scrollbar */
 ::-webkit-scrollbar {
     width: .8em;
@@ -118,12 +128,13 @@
 .dict, .list{
     display: flex;
 }
-.dict-items, .list-items, .comment{
-    margin: 0 0 0 1em;
+.dict-items, .list-items{
+    margin-left: 1.5em;
 }
 .comment{
     font-style: italic;
     color: var(--comment-color);
+    margin-left: 1em;
 }
 .python-icon{
     width: 15px;
