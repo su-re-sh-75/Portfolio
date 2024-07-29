@@ -23,13 +23,21 @@ $(document).ready(function(){
             "description": "Music player website with a custom audio player like Spotify. Made with PHP, MySQL, HTML, CSS and JavaScript",
             "image_path": "images/Spotify Music Player.png",
             "tags": "PHP HTML CSS"
+        },
+        {
+            "name": "Baby Vision Pro",
+            "description": "A Smart Domestic Baby monitoring System in IoT that performs Live Baby monitoring, Cry Detection\,\
+                sends notification / SMS to parents, features a real-time dashboard for analysis.",
+            "image_path": "images/Baby Vision Pro.jpg",
+            "tags": "HTML CSS Django Python Bash TailwindCSS"
         }
     ]
     project_path = {
         "Music Recommendation System": "https://github.com/su-re-sh-75/music-recommender-ml",
         "YouTube Media Downloader": "https://github.com/su-re-sh-75/YouTube-Media-Downloader",
         "Portfolio Website": "https://github.com/su-re-sh-75/Portfolio",
-        "Music Player": "https://github.com/su-re-sh-75/spotify-music-player"
+        "Music Player": "https://github.com/su-re-sh-75/spotify-music-player",
+        "Baby Vision Pro": "https://github.com/su-re-sh-75/Baby-Vision-Pro"
     }
     function load_content(tag){
         let code_content = $('.projects');
